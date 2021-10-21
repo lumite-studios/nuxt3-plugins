@@ -7,7 +7,9 @@ export default defineNuxtPlugin((nuxtApp: any) => {
 		locale: 'en',
 		fallbackLocale: 'en',
 		messages: {
-			global: 'global message'
+			en: {
+				global: 'global message'
+			}
 		},
 	})
 	nuxtApp.vueApp.use(i18n);

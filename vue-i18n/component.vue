@@ -11,7 +11,9 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n({
 	locale: 'en',
 	messages: {
-		component: 'component message'
+		en: {
+			component: 'component message'
+		}
 	},
 })
 </script>
