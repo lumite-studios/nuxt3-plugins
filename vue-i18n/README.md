@@ -1,4 +1,4 @@
-# velocity-animate
+# vue-i18n
 
 ```bash
 npm install vue-i18n@next
