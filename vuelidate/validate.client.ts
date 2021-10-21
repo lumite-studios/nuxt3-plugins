@@ -1,12 +1,12 @@
 import { defineNuxtPlugin } from '#app'
-import velocity from 'velocity-animate/velocity.min.js'
+import useVuelidate from '@vuelidate/core'
 
 export default defineNuxtPlugin((nuxtApp: any) => {
-	nuxtApp.provide('velocity', velocity);
+	nuxtApp.provide('v', useVuelidate);
 })
 
 declare module '#app' {
 	interface NuxtApp {
-		$velocity(): any
+		$v(): any
 	}
 }
