@@ -5,7 +5,6 @@ export default function(amount: number) {
 		$validator: function(value: string) {
 			return !helpers.req(value) || value.length === amount
 		},
-		$message: ({ $params }) => `This field should be exactly ${$params.amount} long.`,
 		$params: { amount, type: 'size' }
 	}
 }

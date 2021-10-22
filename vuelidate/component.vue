@@ -19,11 +19,11 @@ import { required, email } from '@vuelidate/validators'
 const form = ref({
 	email_address: '' as string,
 }) as Ref
-const rules = {
+const rules = ref({
 	form: {
 		email_address: { required, email },
 	}
-}
+}) as Ref
 const validate = useVuelidate(rules, form)
 
 function submit(): void {
