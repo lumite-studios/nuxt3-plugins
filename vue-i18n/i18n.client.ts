@@ -1,7 +1,7 @@
-import { defineNuxtPlugin } from '#app'
-import { createI18n } from 'vue-i18n'
+import { defineNuxtPlugin, NuxtApp } from '#app'
+import { createI18n, useI18n } from 'vue-i18n'
 
-export default defineNuxtPlugin((nuxtApp: any) => {
+export default defineNuxtPlugin((nuxt: NuxtApp) => {
 	const i18n = createI18n({
 		legacy: false,
 		locale: 'en',
@@ -12,5 +12,6 @@ export default defineNuxtPlugin((nuxtApp: any) => {
 			}
 		},
 	})
-	nuxtApp.vueApp.use(i18n);
+	nuxt.vueApp.use(i18n)
+	nuxt.provide('i18n', useI18n)
 })
