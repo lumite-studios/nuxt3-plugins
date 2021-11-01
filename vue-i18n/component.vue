@@ -6,9 +6,9 @@
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from 'vue-i18n'
+import { translations } from '~/composables/translations'
 
-const { t }: any = useI18n({
+const { t }: any = translations({
 	locale: 'en',
 	messages: {
 		en: {
